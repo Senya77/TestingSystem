@@ -1,0 +1,89 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Заголовок -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Создание теста"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Раздел: Название теста -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Название теста"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/et_test_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите название теста"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_background"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Раздел: Добавление вопросов -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Вопросы"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/btn_add_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Добавить вопрос"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"
+        android:textSize="16sp"/>
+
+    <!-- Список вопросов (ListView) -->
+    <ListView
+        android:id="@+id/lv_questions"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="24dp"
+        />
+
+    <!-- Раздел: Ограничение времени -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ограничение по времени (минуты)"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/et_time_limit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:hint="Ограничение по времени (в минутах)"
+        android:inputType="number"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_background"
+        />
+
+    <!-- Раздел: Сохранение теста -->
+    <Button
+        android:id="@+id/btn_save_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Сохранить тест"
+        android:padding="16dp"
+        android:textSize="16sp"/>
+
+</LinearLayout>

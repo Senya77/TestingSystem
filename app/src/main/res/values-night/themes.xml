@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.TestingSystem.Beige" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/beige_primary</item>
+        <item name="colorPrimaryVariant">@color/beige_primary_dark</item>
+        <item name="colorOnPrimary">@color/beige_on_primary</item>
+        <item name="android:windowBackground">@color/beige_background</item>
+        <item name="android:textColor">@color/beige_text</item>
+        <item name="android:colorBackground">@color/beige_background</item>
+        <item name="colorAccent">@color/beige_accent</item>
+    </style>
+</resources>

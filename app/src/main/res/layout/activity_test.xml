@@ -1,0 +1,125 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Заголовок (название теста) -->
+        <TextView
+            android:id="@+id/testName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Test Name"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <!-- Верхняя строка информации (таймер и индекс вопроса) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/timerText"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textSize="18sp"
+                android:gravity="start"/>
+
+            <TextView
+                android:id="@+id/currentQuestionIndex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Вопрос 1 из X"
+                android:textSize="18sp"
+                android:gravity="end"
+                />
+        </LinearLayout>
+
+        <!-- Изображение вопроса -->
+        <ImageView
+            android:id="@+id/questionImage"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginBottom="16dp"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            android:background="@drawable/image_view_background"/>
+
+        <!-- Контейнер для вариантов ответов (вопросов) -->
+        <LinearLayout
+            android:id="@+id/questionsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp"/>
+
+
+        <!-- Кнопки управления -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <Button
+                android:id="@+id/previousButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Предыдущий"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:padding="16dp"
+                android:textSize="16sp"
+                />
+
+            <Space
+                android:layout_width="16dp"
+                android:layout_height="wrap_content" />
+
+
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Следующий"
+                android:padding="16dp"
+                android:textSize="16sp"
+                />
+
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Завершить"
+                android:visibility="gone"
+                android:padding="16dp"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <!-- Результаты -->
+        <TextView
+            android:id="@+id/resultsTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Результаты будут отображены здесь"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,145 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Заголовок -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Создание вопроса"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Раздел: Вопрос -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Текст вопроса"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/et_question_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/edit_text_background"
+            android:hint="Введите текст вопроса"
+            android:padding="12dp"
+            android:textColor="@color/black" />
+
+        <!-- Раздел: Добавление изображения -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Изображение (необязательно)"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btn_add_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Добавить изображение"
+                />
+
+            <ImageView
+                android:id="@+id/iv_question_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:layout_marginStart="8dp"
+                android:visibility="gone"
+                android:background="@drawable/image_view_background"/>
+
+
+        </LinearLayout>
+
+        <!-- Раздел: Варианты ответа -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Варианты ответа"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/et_option_count"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_background"
+                android:hint="Количество вариантов"
+                android:inputType="number"
+                android:padding="12dp" />
+
+            <Button
+                android:id="@+id/btn_generate_options"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Сгенерировать"
+                />
+        </LinearLayout>
+
+        <!-- Контейнер для вариантов ответа (динамический) -->
+        <LinearLayout
+            android:id="@+id/ll_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Раздел: Баллы за вопрос -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Баллы за каждый правильный ответ"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+
+        <EditText
+            android:id="@+id/et_points"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Баллы"
+            android:inputType="number"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/edit_text_background"
+            />
+
+
+        <!-- Раздел: Сохранение -->
+        <Button
+            android:id="@+id/btn_save_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Сохранить вопрос"
+            android:padding="16dp"
+            android:textSize="16sp" />
+    </LinearLayout>
+</ScrollView>

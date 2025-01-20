@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Бежевая цветовая палитра -->
+    <color name="beige_primary">#F5EEDC</color>       <!-- Светло-бежевый (основной цвет) -->
+    <color name="beige_primary_dark">#E0DAC9</color>  <!-- Темно-бежевый (вариант основного цвета) -->
+    <color name="beige_on_primary">#212121</color>     <!-- Темный цвет для текста/иконок поверх основного цвета-->
+    <color name="beige_background">#F0E6D6</color>    <!-- Темно-бежевый фон -->
+    <color name="beige_text">#424242</color>        <!-- Темно-серый для текста -->
+    <color name="beige_accent">#A9A18F</color>   <!-- Акцентный цвет -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>
